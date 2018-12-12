@@ -5,11 +5,11 @@ const methodOverride = require('method-override');
 require('./db/db')
 
 const petController = require('./controllers/pC')
-app.use('/pets', petController);
+
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(methodOverride('_method'));
 
-
+app.use('/pets', petController);
 
 
 app.get('/', (req, res) => {

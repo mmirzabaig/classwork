@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>ANIMALS</h1>
+      <% for ( let i = 0; i < animals.length; i++ ) {%>
+          <ul>
+          <%= animals[i].name%> the <%= animals[i].type%>
+      <form action="/animals/<%=i%>?_method=DELETE" method="POST">
+        <input type="submit" value="delete">
+      </form>
+      <a href="/animals/<%=i%>">Link To The Page</a><br/>
+
+      <a href="/animals/<%=i%>/edit">Edit <%=animals[i].name%></a>
+
+      </ul>
+  <% } %>
+  </body>
+</html>

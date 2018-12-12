@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Edit Animal</h1>
+    <form action="/animals/<%=index%>?_method=PUT" method="POST">
+      Name : <input type="text" name="name" value="<%=animals.name%>"><br/>
+      Type : <input type="text" name="type" value="<%=animals.type%>"><br/>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
